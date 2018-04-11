@@ -17,8 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ThreeByThreeActivity" />
-        <activity android:name=".FourByFourActivity" />
-        <activity android:name=".FiveByFiveActivity"></activity>
+        <activity android:name=".ThreeByThreeWithComputerActivity"></activity>
     </application>
 
 </manifest>

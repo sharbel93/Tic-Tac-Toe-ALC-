@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
-public class FiveByFiveActivity extends AppCompatActivity {
+import java.util.Random;
+
+public class ThreeByThreeWithComputerActivity extends AppCompatActivity {
     private Button[][] btnBoard;
     private TextView tvPlayer_X;
     private TextView tvPlayer_O;
@@ -19,23 +21,24 @@ public class FiveByFiveActivity extends AppCompatActivity {
     private  int xPoints;
     private int OPoints;
     private int draw;
+    private static final Random RANDOM = new Random();
     GridLayout grid;
     AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_five_by_five);
+        setContentView(R.layout.activity_three_by_three_with_computer);
         tvPlayer_X = findViewById(R.id.tv_Xscore);
         tvPlayer_O = findViewById(R.id.tv_Oscore);
         tv_draw = findViewById(R.id.tv_draw);
         builder = new AlertDialog.Builder(this);
 
         grid = findViewById(R.id.gridLayout);
-        btnBoard = new Button[5][5];
-        for(int i = 0; i < 5; i++){
-            for(int j=0; j < 5; j++){
-                btnBoard[i][j] = (Button) grid.getChildAt(5 * i + j);
+        btnBoard = new Button[3][3];
+        for(int i = 0; i < 3; i++){
+            for(int j=0; j<3; j++){
+                btnBoard[i][j] = (Button) grid.getChildAt(3 * i + j);
             }
         }
 
@@ -49,19 +52,31 @@ public class FiveByFiveActivity extends AppCompatActivity {
 
     }
 
-    public void playMoveFive(View view){
+
+    public boolean compMove() {
+       int rand = (int) (Math.random()*9);
+       int i =  rand/ 3;
+       int j = rand % 3;
+
+       if(!gameTurn){
+
+
+       }
+
+       btnBoard[i][j].setText("X");
+
+       return false;
+    }
+
+    public void playMove(View view){
         int index = grid.indexOfChild(view);
-        int i = index / 5;
-        int j = index % 5;
+        int i = index / 3;
+        int j = index % 3;
 
-        if (!(btnBoard[i][j].getText().toString().equals(""))){
-            return;
-        }
+        if ( gameTurn && !(btnBoard[i][j].getText().toString().equals("X")) && !(btnBoard[i][j].getText().toString().equals("X")) ){
 
-        if(gameTurn) {
-            btnBoard[i][j].setText("X");
-        } else {
-            btnBoard[i][j].setText("O");
+                btnBoard[i][j].setText("X");
+
         }
 
         counter++;
@@ -74,7 +89,7 @@ public class FiveByFiveActivity extends AppCompatActivity {
                 // Log.v(TAG,"player o win");
                 playerOWins();
             }
-        } else if (counter == 25){
+        } else if (counter == 9){
             //  Log.v(TAG,"draw");
             draw();
         } else {
@@ -85,14 +100,12 @@ public class FiveByFiveActivity extends AppCompatActivity {
 
     protected boolean checkGameWin(){
 
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < 3; i++){
             /**
              * Horizontal Rows
              */
             if (btnBoard[i][0].getText().toString().equals(btnBoard[i][1].getText().toString())
                     && btnBoard[i][0].getText().toString().equals(btnBoard[i][2].getText().toString())
-                    && btnBoard[i][0].getText().toString().equals(btnBoard[i][3].getText().toString())
-                    && btnBoard[i][0].getText().toString().equals(btnBoard[i][4].getText().toString())
                     && !btnBoard[i][0].getText().toString().equals("")) {
                 return true;
             }
@@ -102,8 +115,6 @@ public class FiveByFiveActivity extends AppCompatActivity {
              */
             if (btnBoard[0][i].getText().toString().equals(btnBoard[1][i].getText().toString())
                     && btnBoard[0][i].getText().toString().equals(btnBoard[2][i].getText().toString())
-                    && btnBoard[0][i].getText().toString().equals(btnBoard[3][i].getText().toString())
-                    && btnBoard[0][i].getText().toString().equals(btnBoard[4][i].getText().toString())
                     && !btnBoard[0][i].getText().toString().equals("")) {
                 return true;
             }
@@ -113,8 +124,6 @@ public class FiveByFiveActivity extends AppCompatActivity {
              */
             if (btnBoard[0][0].getText().toString().equals(btnBoard[1][1].getText().toString())
                     && btnBoard[0][0].getText().toString().equals(btnBoard[2][2].getText().toString())
-                    && btnBoard[0][0].getText().toString().equals(btnBoard[3][3].getText().toString())
-                    && btnBoard[0][0].getText().toString().equals(btnBoard[4][4].getText().toString())
                     && !btnBoard[0][0].getText().toString().equals("")) {
                 return true;
             }
@@ -122,11 +131,9 @@ public class FiveByFiveActivity extends AppCompatActivity {
             /**
              * 2nd Diagonal
              */
-            if (btnBoard[0][4].getText().toString().equals(btnBoard[1][3].getText().toString())
-                    && btnBoard[0][4].getText().toString().equals(btnBoard[2][2].getText().toString())
-                    && btnBoard[0][4].getText().toString().equals(btnBoard[3][1].getText().toString())
-                    && btnBoard[0][4].getText().toString().equals(btnBoard[4][0].getText().toString())
-                    && !btnBoard[0][4].getText().toString().equals("")) {
+            if (btnBoard[0][2].getText().toString().equals(btnBoard[1][1].getText().toString())
+                    && btnBoard[0][2].getText().toString().equals(btnBoard[2][0].getText().toString())
+                    && !btnBoard[0][2].getText().toString().equals("")) {
                 return true;
             }
         }
@@ -134,8 +141,8 @@ public class FiveByFiveActivity extends AppCompatActivity {
     }
 
     protected void resetGame(){
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; j < 5; j++) {
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++) {
                 btnBoard[i][j].setText("");
             }
         }
@@ -195,4 +202,7 @@ public class FiveByFiveActivity extends AppCompatActivity {
         updateScores();
         resetGame();
     }
+
+
+
 }

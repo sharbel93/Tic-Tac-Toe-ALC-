@@ -20,17 +20,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void game4(View view) {
-        Intent intent = new Intent(this, FourByFourActivity.class);
-        if(intent.resolveActivity(getPackageManager()) != null){
-            startActivity(intent);
-        }
-    }
 
-    public void game5(View view) {
-        Intent intent = new Intent(this, FiveByFiveActivity.class);
-        if(intent.resolveActivity(getPackageManager()) != null){
-            startActivity(intent);
-        }
-    }
 }
