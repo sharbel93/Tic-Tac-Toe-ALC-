@@ -49,7 +49,7 @@ public class FiveByFiveActivity extends AppCompatActivity {
 
     }
 
-    private void playMoveFive(View view){
+    public void playMoveFive(View view){
         int index = grid.indexOfChild(view);
         int i = index / 5;
         int j = index % 5;
