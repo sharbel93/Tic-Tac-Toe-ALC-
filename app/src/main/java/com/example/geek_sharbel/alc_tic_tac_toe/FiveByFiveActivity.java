@@ -25,27 +25,27 @@ public class FiveByFiveActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_five_by_five);
-//        tvPlayer_X = findViewById(R.id.tv_Xscore);
-//        tvPlayer_O = findViewById(R.id.tv_Oscore);
-//        tv_draw = findViewById(R.id.tv_draw);
-//        builder = new AlertDialog.Builder(this);
-//
-//        grid = findViewById(R.id.gridLayout);
-//        btnBoard = new Button[5][5];
-//        for(int i = 0; i < 5; i++){
-//            for(int j=0; j < 5; j++){
-//                btnBoard[i][j] = (Button) grid.getChildAt(5 * i + j);
-//            }
-//        }
-//
-//        Button btnReset = findViewById(R.id.btn_reset);
-//        btnReset.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startGame();
-//            }
-//        });
+        setContentView(R.layout.activity_five_by_five);
+        tvPlayer_X = findViewById(R.id.tv_Xscore);
+        tvPlayer_O = findViewById(R.id.tv_Oscore);
+        tv_draw = findViewById(R.id.tv_draw);
+        builder = new AlertDialog.Builder(this);
+
+        grid = findViewById(R.id.gridLayout);
+        btnBoard = new Button[5][5];
+        for(int i = 0; i < 5; i++){
+            for(int j=0; j < 5; j++){
+                btnBoard[i][j] = (Button) grid.getChildAt(5 * i + j);
+            }
+        }
+
+        Button btnReset = findViewById(R.id.btn_reset);
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startGame();
+            }
+        });
 
     }
 
