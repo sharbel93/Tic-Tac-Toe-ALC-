@@ -4,43 +4,39 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class ThreeByThreeActivity extends AppCompatActivity {
+public class FourByFourActivity extends AppCompatActivity {
 
-      private Button[][] btnBoard;
-      private TextView tvPlayer_X;
-      private TextView tvPlayer_O;
-      private TextView tv_draw;
-      private boolean gameTurn = true;
-      private int counter;
-      private  int xPoints;
-      private int OPoints;
-      private int draw;
-      GridLayout grid;
-      AlertDialog.Builder builder;
-    private static final String TAG = "ThreeByThreeActivity";
+    private Button[][] btnBoard;
+    private TextView tvPlayer_X;
+    private TextView tvPlayer_O;
+    private TextView tv_draw;
+    private boolean gameTurn = true;
+    private int counter;
+    private  int xPoints;
+    private int OPoints;
+    private int draw;
+    GridLayout grid;
+    AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_three_by_three);
-
+        setContentView(R.layout.activity_four_by_four);
         tvPlayer_X = findViewById(R.id.tv_Xscore);
         tvPlayer_O = findViewById(R.id.tv_Oscore);
         tv_draw = findViewById(R.id.tv_draw);
         builder = new AlertDialog.Builder(this);
 
         grid = findViewById(R.id.gridLayout);
-        btnBoard = new Button[3][3];
-        for(int i = 0; i < 3; i++){
-            for(int j=0; j<3; j++){
-                btnBoard[i][j] = (Button) grid.getChildAt(3 * i + j);
+        btnBoard = new Button[4][4];
+        for(int i = 0; i < 4; i++){
+            for(int j=0; j < 4; j++){
+                btnBoard[i][j] = (Button) grid.getChildAt(4 * i + j);
             }
         }
 
@@ -48,16 +44,16 @@ public class ThreeByThreeActivity extends AppCompatActivity {
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              startGame();
+                startGame();
             }
         });
 
     }
 
-    public void playMove(View view){
+   public void playMoveFour(View view){
         int index = grid.indexOfChild(view);
-        int i = index / 3;
-        int j = index % 3;
+        int i = index / 4;
+        int j = index % 4;
 
         if (!(btnBoard[i][j].getText().toString().equals(""))){
             return;
@@ -79,8 +75,8 @@ public class ThreeByThreeActivity extends AppCompatActivity {
                 // Log.v(TAG,"player o win");
                 playerOWins();
             }
-        } else if (counter == 9){
-           //  Log.v(TAG,"draw");
+        } else if (counter == 16){
+            //  Log.v(TAG,"draw");
             draw();
         } else {
             gameTurn = !gameTurn;
@@ -90,13 +86,14 @@ public class ThreeByThreeActivity extends AppCompatActivity {
 
     protected boolean checkGameWin(){
 
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < 4; i++){
             /**
              * Horizontal Rows
              */
             if (btnBoard[i][0].getText().toString().equals(btnBoard[i][1].getText().toString())
                     && btnBoard[i][0].getText().toString().equals(btnBoard[i][2].getText().toString())
-                       && !btnBoard[i][0].getText().toString().equals("")) {
+                    && btnBoard[i][0].getText().toString().equals(btnBoard[i][3].getText().toString())
+                    && !btnBoard[i][0].getText().toString().equals("")) {
                 return true;
             }
 
@@ -105,8 +102,9 @@ public class ThreeByThreeActivity extends AppCompatActivity {
              */
             if (btnBoard[0][i].getText().toString().equals(btnBoard[1][i].getText().toString())
                     && btnBoard[0][i].getText().toString().equals(btnBoard[2][i].getText().toString())
+                    && btnBoard[0][i].getText().toString().equals(btnBoard[3][i].getText().toString())
                     && !btnBoard[0][i].getText().toString().equals("")) {
-                    return true;
+                return true;
             }
 
             /**
@@ -114,6 +112,7 @@ public class ThreeByThreeActivity extends AppCompatActivity {
              */
             if (btnBoard[0][0].getText().toString().equals(btnBoard[1][1].getText().toString())
                     && btnBoard[0][0].getText().toString().equals(btnBoard[2][2].getText().toString())
+                    && btnBoard[0][0].getText().toString().equals(btnBoard[3][3].getText().toString())
                     && !btnBoard[0][0].getText().toString().equals("")) {
                 return true;
             }
@@ -121,9 +120,10 @@ public class ThreeByThreeActivity extends AppCompatActivity {
             /**
              * 2nd Diagonal
              */
-            if (btnBoard[0][2].getText().toString().equals(btnBoard[1][1].getText().toString())
-                    && btnBoard[0][2].getText().toString().equals(btnBoard[2][0].getText().toString())
-                    && !btnBoard[0][2].getText().toString().equals("")) {
+            if (btnBoard[0][3].getText().toString().equals(btnBoard[1][2].getText().toString())
+                    && btnBoard[0][3].getText().toString().equals(btnBoard[2][1].getText().toString())
+                    && btnBoard[0][3].getText().toString().equals(btnBoard[3][0].getText().toString())
+                    && !btnBoard[0][3].getText().toString().equals("")) {
                 return true;
             }
         }
@@ -131,14 +131,14 @@ public class ThreeByThreeActivity extends AppCompatActivity {
     }
 
     protected void resetGame(){
-         for(int i = 0; i < 3; i++){
-             for(int j = 0; j < 3; j++) {
-                 btnBoard[i][j].setText("");
-             }
-         }
+        for(int i = 0; i < 4; i++){
+            for(int j = 0; j < 4; j++) {
+                btnBoard[i][j].setText("");
+            }
+        }
 
-         counter = 0;
-         gameTurn = true;
+        counter = 0;
+        gameTurn = true;
     }
     protected void updateScores(){
         tvPlayer_X.setText(" X :   "+ xPoints);
@@ -181,7 +181,6 @@ public class ThreeByThreeActivity extends AppCompatActivity {
             }
         });
         AlertDialog dialog = builder.create();
-
         dialog.show();
 
     }
@@ -193,6 +192,5 @@ public class ThreeByThreeActivity extends AppCompatActivity {
         updateScores();
         resetGame();
     }
-
 
 }

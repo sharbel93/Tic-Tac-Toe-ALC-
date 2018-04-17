@@ -13,12 +13,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void game3(View view) {
+    public void Three(View view) {
         Intent intent = new Intent(this, ThreeByThreeActivity.class);
         if(intent.resolveActivity(getPackageManager()) != null){
             startActivity(intent);
         }
     }
 
+
+    public void four(View view) {
+        Intent intent = new Intent(this, FourByFourActivity.class);
+        if(intent.resolveActivity(getPackageManager()) != null){
+            startActivity(intent);
+        }
+    }
+
+    public void five(View view) {
+        Intent intent = new Intent(this, FiveByFiveActivity.class);
+        if(intent.resolveActivity(getPackageManager()) != null){
+            startActivity(intent);
+        }
+    }
 
 }

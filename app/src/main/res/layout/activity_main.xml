@@ -4,31 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#64b5f6"
     tools:context=".MainActivity">
 
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
+       android:layout_marginLeft="16dp"
+       android:layout_marginRight="16dp"
        android:orientation="vertical">
+
        <TextView
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:text="Tic-Tac-Toe"
-           android:gravity="center"
            android:layout_margin="24dp"
-           android:textSize="24sp"/>
+           android:fontFamily="@font/amaranth"
+           android:gravity="center"
+           android:text="Tic-Tac-Toe"
+           android:textSize="24sp" />
+
+       <ImageView
+           android:id="@+id/imageView1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:scaleType="fitCenter"
+           android:layout_gravity="center"
+           android:src="@drawable/tictactoe" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="24dp"
+           android:fontFamily="@font/amaranth"
+           android:gravity="center"
+           android:text="Two Player Mode"
+           android:textSize="24sp" />
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:orientation="horizontal">
+
            <Button
                android:layout_width="0dp"
                android:layout_height="wrap_content"
                android:layout_weight="1"
-               android:text="3*3"
-               android:onClick="game3"
-               android:textSize="16sp"/>
-        
+               android:fontFamily="@font/amaranth"
+               android:onClick="Three"
+               android:textColor="@android:color/white"
+               android:background="#2979ff"
+               android:text="3*3 Board"
+
+               android:textSize="16sp" />
+
+
        </LinearLayout>
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/amaranth"
+           android:onClick="four"
+           android:background="#2979ff"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="8dp"
+           android:textColor="@android:color/white"
+           android:text="4*4 Board"
+           android:textSize="16sp" />
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/amaranth"
+           android:onClick="five"
+           android:background="#2979ff"
+
+           android:textColor="@android:color/white"
+           android:text="5*5 Board"
+           android:textSize="16sp" />
    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

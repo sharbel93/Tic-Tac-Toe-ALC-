@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#64b5f6"
+    android:padding="12dp"
+
     tools:context=".ThreeByThreeActivity">
 
     <LinearLayout
@@ -14,53 +17,52 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Scores"
-            android:textSize="24sp"
-            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/amaranth"
             android:gravity="center"
-            android:layout_marginTop="12dp"/>
+            android:text="Scores"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/tv_Xscore"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="#43ff6b"
+                android:fontFamily="@font/caudex"
                 android:text=" X :   0"
-                android:textSize="24sp"
                 android:textColor="@color/colorPrimary"
-                android:background="#43ff6b"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/tv_draw"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=" Draw :   0"
                 android:layout_marginLeft="5dp"
-                android:textSize="24sp"
+                android:layout_weight="1"
+                android:background="#43ff6b"
+                android:fontFamily="@font/caudex"
+                android:text=" Draw :   0"
                 android:textColor="@color/colorPrimary"
-                android:background="#43ff6b"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/tv_Oscore"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=" O :   0"
                 android:layout_marginLeft="5dp"
-                android:textSize="24sp"
+                android:layout_weight="1"
+                android:background="#43ff6b"
+                android:fontFamily="@font/caudex"
+                android:text=" O :   0"
                 android:textColor="@color/colorPrimary"
-                android:background="#43ff6b"/>
+                android:textSize="24sp" />
         </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" 3 * 3 Game"
-            android:textSize="30sp"
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"/>
 
 
         <GridLayout
@@ -71,98 +73,107 @@
             android:layout_margin="16dp"
             android:columnCount="3"
             android:rowCount="3">
+
             <Button
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:background="#8d6e63"
                 android:id="@+id/btn_b00"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:textSize="40sp"
-                android:onClick="playMove"
-                />
-            <Button
-                style="@style/Widget.AppCompat.Button.Borderless"
                 android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMove"
+                android:textSize="40sp" />
+
+            <Button
                 android:id="@+id/btn_b01"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
-                android:layout_height="wrap_content"
-                android:textSize="40sp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
                 android:onClick="playMove"
-                />
+                android:textSize="40sp" />
+
             <Button
                 android:id="@+id/btn_b02"
-                android:background="#8d6e63"
                 android:layout_width="wrap_content"
-                android:layout_margin="4dp"
                 android:layout_height="wrap_content"
-                android:textSize="40sp"
+                android:layout_margin="4dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
                 android:onClick="playMove"
-                />
+                android:textSize="40sp" />
+
             <Button
                 android:id="@+id/btn_b10"
-                android:background="#8d6e63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:textSize="40sp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
                 android:onClick="playMove"
 
-                />
+                android:textSize="40sp" />
+
             <Button
                 android:id="@+id/btn_b11"
-                android:background="#8d6e63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
-                android:textSize="40sp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
                 android:onClick="playMove"
-                />
+                android:textSize="40sp" />
+
             <Button
                 android:id="@+id/btn_b12"
-                android:background="#8d6e63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text=""
-                android:textSize="40sp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
                 android:onClick="playMove"
-                />
+                android:text=""
+                android:textSize="40sp" />
+
             <Button
                 android:id="@+id/btn_b20"
-                android:background="#8d6e63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:textSize="40sp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
                 android:onClick="playMove"
-                />
+                android:textSize="40sp" />
+
             <Button
                 android:id="@+id/btn_b21"
-                android:background="#8d6e63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:textSize="40sp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
                 android:onClick="playMove"
-                />
+                android:textSize="40sp" />
+
             <Button
                 android:id="@+id/btn_b22"
-                android:background="#8d6e63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:textSize="40sp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
                 android:onClick="playMove"
 
-                />
+                android:textSize="40sp" />
 
         </GridLayout>
 
@@ -170,14 +181,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <Button
                 android:id="@+id/btn_reset"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
+                android:fontFamily="@font/amaranth"
                 android:gravity="center"
-                android:text="Reset"/>
+                android:background="#2979ff"
+                android:textColor="@android:color/white"
+                android:text="Reset" />
 
         </LinearLayout>
     </LinearLayout>

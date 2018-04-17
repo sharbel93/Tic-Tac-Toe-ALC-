@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="horizontal"
+    android:background="#64b5f6"
+    tools:context=".FiveByFiveActivity">
+
+
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:gravity="center"
+                android:text="Scores"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_Xscore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#43ff6b"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="3"
+                android:fontFamily="@font/caudex"
+                android:text=" X :   0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_draw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#43ff6b"
+                android:layout_weight="3"
+                android:fontFamily="@font/caudex"
+                android:layout_marginBottom="16dp"
+                android:text=" Draw :   0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_Oscore"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="#43ff6b"
+                android:layout_weight="3"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/caudex"
+                android:text=" O :   0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:text="Reset"
+                android:background="#2979ff"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+
+
+        </LinearLayout>
+
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="right"
+            android:columnCount="5"
+            android:rowCount="5">
+
+            <Button
+                android:id="@+id/btn_b00"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b01"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:onClick="playMoveFive"
+                android:textSize="12sp"
+
+                />
+
+            <Button
+                android:id="@+id/btn_b22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fadingEdge="horizontal"
+                android:fontFamily="@font/caudex"
+
+                android:onClick="playMoveFive"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btn_b31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btn_b32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btn_b33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btn_b34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btn_b40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btn_b41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btn_b42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_b44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="#8d6e63"
+                android:fontFamily="@font/caudex"
+                android:onClick="playMoveFive"
+                android:textSize="12sp" />
+
+        </GridLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
