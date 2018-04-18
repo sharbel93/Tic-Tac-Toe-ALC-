@@ -6,10 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="board">@color/board</item>
-        <item name="textScore">@color/textScore</item>
-        <item name="actionButton">@color/actionButton </item>
-        <item name="mainBackground">@color/mainBackground</item>
+        <!--<item name="board">@color/board</item>-->
+        <!--<item name="textScore">@color/textScore</item>-->
+        <!--<item name="actionButton">@color/actionButton </item>-->
+        <!--<item name="mainBackground">@color/mainBackground</item>-->
 
 
     </style>

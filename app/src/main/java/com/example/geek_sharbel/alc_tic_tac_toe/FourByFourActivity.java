@@ -143,7 +143,7 @@ public class FourByFourActivity extends AppCompatActivity {
     protected void updateScores(){
         tvPlayer_X.setText(" X :   "+ xPoints);
         tvPlayer_O.setText(" O :   "+ OPoints);
-        tv_draw.setText(" Draw :   "+ draw);
+        tv_draw.setText(" Draw :  "+ draw);
     }
     protected void playerXWins(){
         xPoints++;
