@@ -15,7 +15,7 @@
         android:layout_marginTop="12dp"
         android:fontFamily="@font/amaranth"
         android:gravity="center"
-        android:text="Scores"
+        android:text="@string/score_label"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp" />
 
@@ -32,7 +32,7 @@
             android:layout_weight="1"
             android:background="#43ff6b"
             android:fontFamily="@font/caudex"
-            android:text=" X :   0"
+            android:text="@string/X_default"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp" />
 
@@ -44,7 +44,7 @@
             android:layout_weight="1"
             android:background="#43ff6b"
             android:fontFamily="@font/caudex"
-            android:text=" Draw :   0"
+            android:text="@string/Draw_default"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp" />
 
@@ -56,7 +56,7 @@
             android:layout_weight="1"
             android:background="#43ff6b"
             android:fontFamily="@font/caudex"
-            android:text=" O :   0"
+            android:text="@string/O_default"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp" />
     </LinearLayout>
@@ -81,7 +81,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -95,7 +95,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -108,7 +108,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -121,7 +121,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
 
@@ -135,7 +135,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -148,7 +148,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -161,7 +161,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -171,7 +171,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -184,7 +184,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
 
@@ -198,7 +198,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
 
@@ -212,7 +212,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -225,7 +225,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -238,7 +238,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -251,7 +251,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -264,7 +264,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fadingEdge="horizontal"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
@@ -278,7 +278,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -292,7 +292,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -306,7 +306,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -317,7 +317,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
 
@@ -332,7 +332,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -346,7 +346,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -360,7 +360,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -374,7 +374,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -384,7 +384,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
 
@@ -398,7 +398,7 @@
             android:layout_gravity="fill"
             android:layout_margin="1dp"
             android:layout_rowWeight="1"
-            android:background="#8d6e63"
+            android:background="@color/board"
             android:fontFamily="@font/caudex"
             android:onClick="playMoveFive"
             android:textSize="16sp" />
@@ -421,11 +421,11 @@
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginTop="12dp"
-            android:background="#2979ff"
+            android:background="@color/actionButton"
             android:textColor="@android:color/white"
             android:fontFamily="@font/amaranth"
             android:gravity="center"
-            android:text="Reset" />
+            android:text="@string/btn_text" />
 
     </LinearLayout>
 </LinearLayout>

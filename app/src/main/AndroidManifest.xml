@@ -17,8 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:label="@string/btn_3_text" android:name=".ThreeByThreeActivity" />
-        <activity android:name=".FourByFourActivity" />
-        <activity android:name=".FiveByFiveActivity" />
+        <activity  android:label="@string/btn_4_text" android:name=".FourByFourActivity" />
+        <activity android:label="@string/btn_5_text" android:name=".FiveByFiveActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

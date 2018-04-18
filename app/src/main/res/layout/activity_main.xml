@@ -51,7 +51,7 @@
                android:fontFamily="@font/amaranth"
                android:onClick="Three"
                android:textColor="@android:color/white"
-               android:background="#2979ff"
+               android:background="@color/actionButton"
                android:text="@string/btn_3_text"
 
                android:textSize="16sp" />
@@ -64,7 +64,7 @@
            android:layout_height="wrap_content"
            android:fontFamily="@font/amaranth"
            android:onClick="four"
-           android:background="#2979ff"
+           android:background="@color/actionButton"
            android:layout_marginTop="8dp"
            android:layout_marginBottom="8dp"
            android:textColor="@android:color/white"
@@ -75,7 +75,7 @@
            android:layout_height="wrap_content"
            android:fontFamily="@font/amaranth"
            android:onClick="five"
-           android:background="#2979ff"
+           android:background="@color/actionButton"
 
            android:textColor="@android:color/white"
            android:text="@string/btn_5_text"
