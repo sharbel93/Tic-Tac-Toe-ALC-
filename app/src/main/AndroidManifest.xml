@@ -19,7 +19,6 @@
         <activity android:name=".ThreeByThreeActivity" />
         <activity android:name=".FourByFourActivity" />
         <activity android:name=".FiveByFiveActivity" />
-        <activity android:name=".ThreeByThreeWithComputerActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
