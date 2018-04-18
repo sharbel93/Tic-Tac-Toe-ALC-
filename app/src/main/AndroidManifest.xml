@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ThreeByThreeActivity" />
+        <activity android:label="@string/btn_3_text" android:name=".ThreeByThreeActivity" />
         <activity android:name=".FourByFourActivity" />
         <activity android:name=".FiveByFiveActivity" />
 

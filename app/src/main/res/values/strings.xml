@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ALC_Tic-Tac-Toe</string>
+    <string name="X_default">X : 0</string>
+    <string name="Y_default">Y : 0</string>
+    <string name="Draw_default">Draw : 0</string>
+    <string name="scrore_label">Scores</string>
+    <string name="btn_text">Reset</string>
+    <string name="label_title">Tic-Tac-Toe</string>
+    <string name="mode_text_label">Two Player Mode</string>
+    <string name="btn_3_text">3*3 Board</string>
+    <string name="btn_4_text">4*4 Board</string>
+    <string name="btn_5_text">5*5 Board</string>
 </resources>
